@@ -1,6 +1,9 @@
-<Link
-  href="/docs"
-  className="rounded-xl border border-gray-700 px-6 py-3"
->
-  Documentation
-</Link>
+export default function DocsPage() {
+  return (
+    <main className="min-h-screen bg-black text-white flex items-center justify-center">
+      <h1 className="text-4xl font-bold">
+        Documentation Coming Soon
+      </h1>
+    </main>
+  );
+}
