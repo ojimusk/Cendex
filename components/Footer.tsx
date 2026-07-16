@@ -1,21 +1,43 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black py-10">
-      <div className="mx-auto max-w-7xl px-6 text-center">
+    <footer className="border-t border-white/10 bg-black">
 
-        <h2 className="text-2xl font-bold text-white">
-          Cendex
-        </h2>
+      <div className="mx-auto max-w-7xl px-6 py-14">
 
-        <p className="mt-3 text-gray-500">
-          Professional decentralized perpetual exchange.
-        </p>
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
 
-        <p className="mt-8 text-sm text-gray-600">
+          <div>
+
+            <h2 className="text-2xl font-bold text-white">
+              Cendex
+            </h2>
+
+            <p className="mt-2 text-gray-500">
+              Built on Hyperliquid
+            </p>
+
+          </div>
+
+          <div className="flex gap-8 text-gray-400">
+
+            <a href="#">Docs</a>
+
+            <a href="#">Twitter</a>
+
+            <a href="#">Discord</a>
+
+            <a href="#">Github</a>
+
+          </div>
+
+        </div>
+
+        <div className="mt-10 border-t border-white/10 pt-6 text-center text-sm text-gray-600">
           © 2026 Cendex. All rights reserved.
-        </p>
+        </div>
 
       </div>
+
     </footer>
   );
 }
