@@ -1,8 +1,13 @@
+import AppLayout from "@/components/layout/AppLayout";
+
 export default function DashboardPage() {
   return (
-    <main>
-      <h1>Dashboard</h1>
-      <p>Coming Soon</p>
-    </main>
+    <AppLayout>
+      <h1 className="text-2xl font-bold">Dashboard</h1>
+
+      <p className="mt-2 text-gray-400">
+        Welcome to Cendex 🚀
+      </p>
+    </AppLayout>
   );
 }
