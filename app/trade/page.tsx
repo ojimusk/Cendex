@@ -1,12 +1,14 @@
 import Badge from "@/components/Badge";
-import Card from "@/components/Card";
 import Button from "@/components/Button";
+import Card from "@/components/Card";
+import OrderBook from "@/components/OrderBook";
 
 export default function TradePage() {
   return (
     <main className="min-h-screen bg-black px-6 py-32 text-white">
       <div className="mx-auto max-w-7xl">
 
+        {/* Header */}
         <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
 
           <div>
@@ -15,13 +17,8 @@ export default function TradePage() {
             </h1>
 
             <div className="mt-3 flex gap-3">
-              <Badge variant="green">
-                Live
-              </Badge>
-
-              <Badge>
-                Cross Margin
-              </Badge>
+              <Badge variant="green">Live</Badge>
+              <Badge>Cross Margin</Badge>
             </div>
           </div>
 
@@ -37,9 +34,11 @@ export default function TradePage() {
 
         </div>
 
+        {/* Layout */}
         <div className="grid gap-6 lg:grid-cols-3">
 
-          <div className="lg:col-span-2">
+          {/* Chart + Order Book */}
+          <div className="space-y-6 lg:col-span-2">
 
             <Card>
 
@@ -52,7 +51,7 @@ export default function TradePage() {
                   </h2>
 
                   <p className="mt-3 text-gray-500">
-                    TradingView Chart will be added in Sprint 5.
+                    TradingView integration coming in Sprint 5.
                   </p>
 
                 </div>
@@ -61,8 +60,11 @@ export default function TradePage() {
 
             </Card>
 
+            <OrderBook />
+
           </div>
 
+          {/* Trade Panel */}
           <div>
 
             <Card>
@@ -76,29 +78,25 @@ export default function TradePage() {
                 <input
                   type="number"
                   placeholder="Amount"
-                  className="w-full rounded-xl border border-white/10 bg-black p-4 outline-none focus:border-blue-500"
+                  className="w-full rounded-xl border border-white/10 bg-black p-4 outline-none transition focus:border-blue-500"
                 />
 
                 <input
                   type="number"
                   placeholder="Leverage"
-                  className="w-full rounded-xl border border-white/10 bg-black p-4 outline-none focus:border-blue-500"
+                  className="w-full rounded-xl border border-white/10 bg-black p-4 outline-none transition focus:border-blue-500"
                 />
 
-                <div className="flex gap-3">
+                <Button href="#">
+                  Buy / Long
+                </Button>
 
-                  <Button href="#">
-                    Buy / Long
-                  </Button>
-
-                  <Button
-                    href="#"
-                    variant="secondary"
-                  >
-                    Sell / Short
-                  </Button>
-
-                </div>
+                <Button
+                  href="#"
+                  variant="secondary"
+                >
+                  Sell / Short
+                </Button>
 
               </div>
 
@@ -111,4 +109,4 @@ export default function TradePage() {
       </div>
     </main>
   );
-}
+      }
