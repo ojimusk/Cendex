@@ -2,6 +2,7 @@ import Badge from "@/components/Badge";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import OrderBook from "@/components/OrderBook";
+import OpenPositions from "@/components/OpenPositions";
 
 export default function TradePage() {
   return (
@@ -34,57 +35,52 @@ export default function TradePage() {
 
         </div>
 
-        {/* Layout */}
         <div className="grid gap-6 lg:grid-cols-3">
 
-          {/* Chart + Order Book */}
+          {/* Left */}
           <div className="space-y-6 lg:col-span-2">
 
             <Card>
-
               <div className="flex h-[500px] items-center justify-center rounded-xl border border-dashed border-white/10">
 
                 <div className="text-center">
-
                   <h2 className="text-3xl font-bold">
                     Trading Chart
                   </h2>
 
                   <p className="mt-3 text-gray-500">
-                    TradingView integration coming in Sprint 5.
+                    TradingView Chart integration coming soon.
                   </p>
-
                 </div>
 
               </div>
-
             </Card>
 
             <OrderBook />
 
           </div>
 
-          {/* Trade Panel */}
-          <div>
+          {/* Right */}
+          <div className="space-y-6">
 
             <Card>
 
-              <h2 className="text-2xl font-bold">
+              <h2 className="mb-6 text-2xl font-bold">
                 Trade
               </h2>
 
-              <div className="mt-8 space-y-4">
+              <div className="space-y-4">
 
                 <input
                   type="number"
                   placeholder="Amount"
-                  className="w-full rounded-xl border border-white/10 bg-black p-4 outline-none transition focus:border-blue-500"
+                  className="w-full rounded-xl border border-white/10 bg-black p-4 outline-none focus:border-blue-500"
                 />
 
                 <input
                   type="number"
                   placeholder="Leverage"
-                  className="w-full rounded-xl border border-white/10 bg-black p-4 outline-none transition focus:border-blue-500"
+                  className="w-full rounded-xl border border-white/10 bg-black p-4 outline-none focus:border-blue-500"
                 />
 
                 <Button href="#">
@@ -102,6 +98,8 @@ export default function TradePage() {
 
             </Card>
 
+            <OpenPositions />
+
           </div>
 
         </div>
@@ -109,4 +107,4 @@ export default function TradePage() {
       </div>
     </main>
   );
-      }
+}
