@@ -1,15 +1,7 @@
-import Navbar from "@/components/Navbar";
-
 export default function TradePage() {
   return (
-    <>
-      <Navbar />
-
-      <main className="bg-black min-h-screen text-white pt-24">
-        {/* Trading Chart */}
-        {/* Order Form */}
-        {/* Positions */}
-      </main>
-    </>
+    <main className="min-h-screen bg-black text-white flex items-center justify-center">
+      <h1 className="text-5xl font-bold">Trade</h1>
+    </main>
   );
 }
