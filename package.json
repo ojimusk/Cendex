@@ -1,3 +1,4 @@
+{
   "name": "cendex",
   "version": "0.1.0",
   "private": true,
@@ -27,3 +28,4 @@
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.2"
   }
+}
