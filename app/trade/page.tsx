@@ -1,8 +1,9 @@
 import Badge from "@/components/Badge";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
-import OrderBook from "@/components/OrderBook";
 import OpenPositions from "@/components/OpenPositions";
+import OrderBook from "@/components/OrderBook";
+import RecentTrades from "@/components/RecentTrades";
 
 export default function TradePage() {
   return (
@@ -37,30 +38,36 @@ export default function TradePage() {
 
         <div className="grid gap-6 lg:grid-cols-3">
 
-          {/* Left */}
+          {/* Left Side */}
           <div className="space-y-6 lg:col-span-2">
 
             <Card>
+
               <div className="flex h-[500px] items-center justify-center rounded-xl border border-dashed border-white/10">
 
                 <div className="text-center">
+
                   <h2 className="text-3xl font-bold">
                     Trading Chart
                   </h2>
 
                   <p className="mt-3 text-gray-500">
-                    TradingView Chart integration coming soon.
+                    TradingView Chart will be integrated in the next sprint.
                   </p>
+
                 </div>
 
               </div>
+
             </Card>
 
             <OrderBook />
 
+            <RecentTrades />
+
           </div>
 
-          {/* Right */}
+          {/* Right Side */}
           <div className="space-y-6">
 
             <Card>
