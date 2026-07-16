@@ -1,116 +1,52 @@
-import Badge from "@/components/Badge";
-import Button from "@/components/Button";
-import Card from "@/components/Card";
-import MarketSelector from "@/components/MarketSelector";
-import OpenPositions from "@/components/OpenPositions";
-import OrderBook from "@/components/OrderBook";
-import RecentTrades from "@/components/RecentTrades";
+import MarketList from "./components/MarketList";
+import TradeForm from "./components/TradeForm";
+import TradeTabs from "./components/TradeTabs";
 
 export default function TradePage() {
   return (
-    <main className="min-h-screen bg-black px-6 py-32 text-white">
+    <main className="min-h-screen bg-black px-4 py-8 text-white">
       <div className="mx-auto max-w-7xl">
 
         {/* Header */}
-        <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-
+        <div className="mb-8 flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
           <div>
-            <h1 className="text-5xl font-bold">
-              BTC-PERP
-            </h1>
+            <h1 className="text-5xl font-bold">BTC-PERP</h1>
 
             <div className="mt-3 flex gap-3">
-              <Badge variant="green">Live</Badge>
-              <Badge>Cross Margin</Badge>
+              <span className="rounded-full bg-green-500/10 px-4 py-2 text-green-400">
+                Live
+              </span>
+
+              <span className="rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-blue-400">
+                Cross Margin
+              </span>
             </div>
           </div>
 
           <div className="text-right">
-            <p className="text-gray-400">
-              Mark Price
-            </p>
-
-            <h2 className="text-4xl font-bold text-blue-500">
+            <p className="text-gray-400">Mark Price</p>
+            <h2 className="text-5xl font-bold text-blue-500">
               $118,420
             </h2>
           </div>
-
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-4">
+        {/* Main Layout */}
+        <div className="grid gap-6 lg:grid-cols-12">
 
-          {/* Left Sidebar */}
-          <div>
-            <MarketSelector />
+          {/* Market List */}
+          <div className="lg:col-span-3">
+            <MarketList />
           </div>
 
-          {/* Center */}
-          <div className="space-y-6 lg:col-span-2">
-
-            <Card>
-              <div className="flex h-[500px] items-center justify-center rounded-xl border border-dashed border-white/10">
-
-                <div className="text-center">
-
-                  <h2 className="text-3xl font-bold">
-                    Trading Chart
-                  </h2>
-
-                  <p className="mt-3 text-gray-500">
-                    TradingView integration coming in Sprint 6.
-                  </p>
-
-                </div>
-
-              </div>
-            </Card>
-
-            <OrderBook />
-
-            <RecentTrades />
-
+          {/* Main Content */}
+          <div className="lg:col-span-6">
+            <TradeTabs />
           </div>
 
-          {/* Right Sidebar */}
-          <div className="space-y-6">
-
-            <Card>
-
-              <h2 className="mb-6 text-2xl font-bold">
-                Trade
-              </h2>
-
-              <div className="space-y-4">
-
-                <input
-                  type="number"
-                  placeholder="Amount"
-                  className="w-full rounded-xl border border-white/10 bg-black p-4 outline-none focus:border-blue-500"
-                />
-
-                <input
-                  type="number"
-                  placeholder="Leverage"
-                  className="w-full rounded-xl border border-white/10 bg-black p-4 outline-none focus:border-blue-500"
-                />
-
-                <Button href="#">
-                  Buy / Long
-                </Button>
-
-                <Button
-                  href="#"
-                  variant="secondary"
-                >
-                  Sell / Short
-                </Button>
-
-              </div>
-
-            </Card>
-
-            <OpenPositions />
-
+          {/* Trade Form */}
+          <div className="lg:col-span-3">
+            <TradeForm />
           </div>
 
         </div>
